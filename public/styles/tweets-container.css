@@ -1,5 +1,6 @@
 article.tweet:hover{
     border: solid black 1px;
+    opacity: 1;
  
   }
 .tweets-container {

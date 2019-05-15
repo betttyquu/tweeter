@@ -88,11 +88,18 @@ function renderTweets(tweetArray) {
 $( "#newpost" ).submit(function( event ) {
   event.preventDefault();
   const str = $( "form" ).serialize();
-  // alert(str);
-  $.post( "http://localhost:8080/tweets",str, function( data ) {
-    // $( ".result" ).html( data );
-  console.log(data);
-  });
+  const text = document.querySelector("textarea");
+  const empty = "";
+
+  if(text.value && text.value.length < 140){
+    $.post( "http://localhost:8080/tweets",str, function(data) {
+    });
+  } if (text.value === empty){
+    alert("CANNOT BE AN EMPTY TWEEEEEET")
+  } if(text.value.length > 140){
+    alert("YOU'VE EXCEEEEEED THE MAX CHARACTER COUNT")
+  }
+
 });
 
 //success callback func = renderTweets();
