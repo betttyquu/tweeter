@@ -38,4 +38,9 @@ span.counter {
     float: right;
     margin-top: 10px;
     padding: 20px 25px;
+    opacity: 0.6;
+}
+
+#compose:hover{
+    opacity: 1;
 }

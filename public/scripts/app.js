@@ -115,3 +115,10 @@ $(function() {
 
 
 
+$("#compose").click(function(){
+  $(".new-tweet").slideToggle();
+});
+
+$( "#compose" ).click(function() {
+  $( "textarea" ).focus();
+});
