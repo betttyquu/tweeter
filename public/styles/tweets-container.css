@@ -1,27 +1,41 @@
+article.tweet:hover{
+    border: solid black 1px;
+ 
+  }
 .tweets-container {
     margin-top: 10px;
-    border-radius: 15px;
+    padding-top: 1px;
     width: auto;
+    border-radius: 15px;
     border: lightblue;
     border-color: gray;
-    height: 180px;
-    background-color: lightgray;
+    height: auto;
     margin-left: 2em;
     margin-right: 2em;
+    padding: 0 0;
+}
+
+article.tweet{
+    padding-bottom: 15px;
+    background-color: aliceblue;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    height: 210px;
+    opacity: 0.6;
 }
 
 header {
     background-color:lightblue;
     height: 80px;
-    
+    display: flex;
+    border-radius: 15px;
 }
 
-h2 {
-    /* float:right; */
-}
 
 h4 {
     float: right;
+    margin-left: 150px;
+    padding-top: 10px;
 }
 
 #avatar {
@@ -29,4 +43,14 @@ h4 {
     border-radius: 10px;
     float: left;
 
+}
+
+p {
+    height:60px;
+    font-size: 20px;
+    padding: 15px;
+}
+
+footer{
+    padding : 0px 15px;
 }
