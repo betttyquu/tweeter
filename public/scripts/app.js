@@ -79,13 +79,14 @@ function createTweetElement(tweet) {
 }
   
 function renderTweets(tweetArray) {
+  $('.tweets-container').empty();
   tweetArray.forEach(data => {
-    $('.tweets-container').append(createTweetElement(data));
+    $('.tweets-container').prepend(createTweetElement(data));
   })
 };
 // renderTweets(data);
 
-$( "#newpost" ).submit(function( event ) {
+$( "#newpost" ).on('submit',(function(event) {
   event.preventDefault();
   const str = $( "form" ).serialize();
   const text = document.querySelector("textarea");
@@ -93,22 +94,24 @@ $( "#newpost" ).submit(function( event ) {
 
   if(text.value && text.value.length < 140){
     $.post( "http://localhost:8080/tweets",str, function(data) {
+      loadTweets();
     });
   } if (text.value === empty){
     alert("CANNOT BE AN EMPTY TWEEEEEET")
   } if(text.value.length > 140){
     alert("YOU'VE EXCEEEEEED THE MAX CHARACTER COUNT")
   }
-
-});
+}));
 
 //success callback func = renderTweets();
+function loadTweets (){
+  $.get('/tweets',function(data){
+    renderTweets(data);
+  } 
+)}
 $(function() {
-  function loadTweets (){
-    $.get('/tweets',function(data){
-      renderTweets(data);
-    } 
-  )}
   loadTweets();
 });
+
+
 

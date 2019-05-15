@@ -33,3 +33,9 @@ span.counter {
 .over {
     color: red;
 }
+
+#compose {
+    float: right;
+    margin-top: 10px;
+    padding: 20px 25px;
+}
