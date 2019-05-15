@@ -1,0 +1,32 @@
+.tweets-container {
+    margin-top: 10px;
+    border-radius: 15px;
+    width: auto;
+    border: lightblue;
+    border-color: gray;
+    height: 180px;
+    background-color: lightgray;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+header {
+    background-color:lightblue;
+    height: 80px;
+    
+}
+
+h2 {
+    /* float:right; */
+}
+
+h4 {
+    float: right;
+}
+
+#avatar {
+    margin: 15px 15px;
+    border-radius: 10px;
+    float: left;
+
+}

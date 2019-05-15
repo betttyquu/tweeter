@@ -1,0 +1,35 @@
+.new-tweet {
+    border-radius: 15px;
+    width: auto;
+    border: solid;
+    border-color: gray;
+    height: 180px;
+    background-color: lightgray;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#new {
+    margin: 5%;
+    border-bottom:2px solid black;
+}
+
+form textarea {
+    width: 340px;
+    overflow: auto;
+    margin-left: 5%;
+    padding: 10px;
+}
+
+input {
+    margin-left: 5%;
+}
+
+span.counter {
+    float: right;
+    margin-right: 6%;
+}
+
+.over {
+    color: red;
+}
