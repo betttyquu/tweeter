@@ -31,11 +31,20 @@ header {
     border-radius: 15px;
 }
 
+h3 {
+    font-size: medium;
+    padding-top: 15px;
+    display: flex;
+    margin-right: 80px;
+    
+}
 
 h4 {
+    font-size: 12px;
     float: right;
-    margin-left: 150px;
-    padding-top: 10px;
+    margin-left: 100px;
+    padding-right: 50px;
+    padding-top: 15px;
 }
 
 #avatar {

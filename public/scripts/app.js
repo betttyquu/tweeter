@@ -75,7 +75,7 @@ function createTweetElement(tweet) {
   let $footer = $('<footer>');
   let $image = $('<img>').attr('id', 'avatar').attr('src', tweet.user.avatars["small"]);
   $header.append($image);
-  $header.append('<h2>' + tweet.user["name"] + '</h2>');
+  $header.append('<h3>' + tweet.user["name"] + '</h3>');
   $header.append('<h4>' + tweet.user["handle"]+ '</h4>');
   $footer.append('<h5>' + tweet["created_at"] + '</h5>');
   $tweet.append($header);
@@ -85,13 +85,20 @@ function createTweetElement(tweet) {
 }
   
 function renderTweets(tweetArray) {
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
-  // $('.tweets-container').empty();
-  tweetArray.forEach($tweet => {
-    $('.tweet-container').append($tweet);
+  tweetArray.forEach(data => {
+    $('.tweets-container').append(createTweetElement(data));
   })
 };
-
 renderTweets(data);
+
+
+
+$( "#newpost" ).submit(function( event ) {
+  const str = $( "form" ).serialize();
+  // alert(str);
+  event.preventDefault();
+  $.post( "http://localhost:8080/tweets",str, function( data ) {
+  console.log(data);
+  });
+});
+
