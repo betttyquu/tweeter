@@ -44,3 +44,7 @@ span.counter {
 #compose:hover{
     opacity: 1;
 }
+
+.error {
+    color:red;
+}

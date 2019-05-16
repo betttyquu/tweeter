@@ -29,17 +29,19 @@
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
       <input id="compose" type="submit" value="Compose">
-
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container" role="main">
       <section class="new-tweet">
+
         <h2 id="new">Compose Tweet</h2>
         <form id="newpost" method="POST" action="/tweets">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <textarea id="textinput" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
+          <label class ="error" id="maxCharactersError">EXCEEEEEED CHARACTER COUNT</label>
+          <label class ="error" id="emptyError">CANNOT BE AN EMPTY TWEEEEEET</label>
         </form>
       </section>  
       <section class="tweets-container">

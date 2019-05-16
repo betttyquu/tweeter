@@ -95,11 +95,13 @@ $( "#newpost" ).on('submit',(function(event) {
   if(text.value && text.value.length < 140){
     $.post( "http://localhost:8080/tweets",str, function(data) {
       loadTweets();
+      $('.error').hide();
     });
   } if (text.value === empty){
-    alert("CANNOT BE AN EMPTY TWEEEEEET")
+    $("#emptyError").slideDown();
+
   } if(text.value.length > 140){
-    alert("YOU'VE EXCEEEEEED THE MAX CHARACTER COUNT")
+    $("#maxCharactersError").slideDown();
   }
 }));
 
@@ -114,11 +116,28 @@ $(function() {
 });
 
 
-
-$("#compose").click(function(){
+// compose button toggles textarea
+$("#compose").click(function() {
   $(".new-tweet").slideToggle();
 });
 
+// directly go to textarea w/o clicking it
 $( "#compose" ).click(function() {
   $( "textarea" ).focus();
+});
+
+$( ".error" ).hide();
+
+$("#textinput").on('input',
+function(){
+  const text = document.querySelector("textarea");
+  const empty = "";
+  if(text.value.length === empty) {
+    $("#emptyError").slideDown();
+  }
+  if(text.value.length > 140) {
+    $("#maxCharactersError").slideDown();
+  } else {
+    $('.error').hide();
+  }
 });
