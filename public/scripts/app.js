@@ -68,7 +68,10 @@ function createTweetElement(tweet) {
   let $header = $('<header>');
   let $footer = $('<footer>');
   let $image = $('<img>').attr('id', 'avatar').attr('src', tweet.user.avatars["small"]);
+  let $icon = $('<img>').attr('id', 'icon').attr('src',"http://chittagongit.com/images/tweet-icon-png/tweet-icon-png-17.jpg");
+  
   $header.append($image);
+  $footer.append($icon);
   $header.append('<h3>' + tweet.user["name"] + '</h3>');
   $header.append('<h4>' + tweet.user["handle"]+ '</h4>');
   $footer.append('<h5>' + tweet["created_at"] + '</h5>');
@@ -126,6 +129,7 @@ $( "#compose" ).click(function() {
   $( "textarea" ).focus();
 });
 
+// hide error
 $( ".error" ).hide();
 
 $("#textinput").on('input',

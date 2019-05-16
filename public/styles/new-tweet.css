@@ -4,7 +4,7 @@
     border: solid;
     border-color: gray;
     height: 180px;
-    background-color: lightgray;
+    background-color:#1ed2ce3d;
     margin-left: 2em;
     margin-right: 2em;
 }
@@ -39,12 +39,16 @@ span.counter {
     margin-top: 10px;
     padding: 20px 25px;
     opacity: 0.6;
+    border: dashed;
+    border-radius: 15px;
 }
 
 #compose:hover{
     opacity: 1;
+
 }
 
 .error {
     color:red;
 }
+
