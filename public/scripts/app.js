@@ -1,15 +1,16 @@
+
 function createTweetElement(tweet) {
   let $tweet = $('<article>').addClass('tweet');
   let $header = $('<header>');
   let $footer = $('<footer>');
   let $image = $('<img>').attr('id', 'avatar').attr('src', tweet.user.avatars["small"]);
   let $icon = $('<img>').attr('id', 'icon').attr('src',"http://chittagongit.com/images/tweet-icon-png/tweet-icon-png-17.jpg");
-  
+  // let time = tweet["created_at"];
   $header.append($image);
   $footer.append($icon);
   $header.append('<h3>' + tweet.user["name"] + '</h3>');
   $header.append('<h4>' + tweet.user["handle"]+ '</h4>');
-  $footer.append('<h5>' + tweet["created_at"] + '</h5>');
+  $footer.append('<h5>' + moment(new Date(tweet["created_at"])).fromNow() + '</h5>');
   $tweet.append($header);
   $tweet.append('<p>' + tweet.content["text"]);
   $tweet.append($footer);
