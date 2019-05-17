@@ -1,8 +1,7 @@
 .new-tweet {
     border-radius: 15px;
     width: auto;
-    border: solid;
-    border-color: gray;
+    border: solid lightgray;
     height: 180px;
     background-color:#1ed2ce3d;
     margin-left: 2em;

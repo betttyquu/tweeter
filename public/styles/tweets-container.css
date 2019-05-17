@@ -1,5 +1,5 @@
 article.tweet:hover{
-    border: solid black 1px;
+    border: solid rgb(250, 211, 224) 1px;
     opacity: 1;
  
   }
@@ -25,7 +25,7 @@ article.tweet{
 }
 
 header {
-    background-color:#00a08738;
+    background-color:#c1eff499;
     height: 80px;
     display: flex;
     border-radius: 15px;
